@@ -1,0 +1,9 @@
+ <div class="box">
+    <p class="pending-work"><%=writehere%></p>
+    <ol>
+      <div class="item">
+      <%    for(var i=0; i<TextOfToDo.length;i++){  %>
+      <li class="list-items"><%=TextOfToDo[i]%>.</li>
+      <%    }                                     %>
+      </div>
+    </ol>

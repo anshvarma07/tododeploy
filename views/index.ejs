@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Montserrat:wght@100&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+  <title>To Do List</title>
+</head>
+
+<body>
+  <div>
+    <h1 class="box" id="heading"><%=dayitis%>.</h1>
+     <div class="box">
+     <p class="pending-work"><%=writehere%></p>
+    
+    <% TextOfToDo.forEach(function(item){  %>
+      <div class="item">
+        <input type="checkbox" name="checkbox" onChange="this.form.submit()"  value=<%=item._id%>>
+        <p><%=  item.name  %></p>
+      </div>
+    <%})  %>
+
+
+    <form action="/" method="post">
+        
+        <input type="text" class="input" id="Email" name="TextOfToDo" placeholder="New Item" autocomplete="off">
+        <button class="" type="submit">+</button>
+    </form>
+  </div>
+  </div>
+
+  <footer>Created By Ansh Varma</footer>
+
+</body>
+
+</html>
